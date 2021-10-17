@@ -1,0 +1,8 @@
+name: Disablecraft
+version: '${project.version}'
+main: de.doppelbemme.jogo.disablecraft.Disablecraft
+api-version: 1.17
+authors: [ Doppelbemme ]
+commands:
+  about:
+  recipe:
