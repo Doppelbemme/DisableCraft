@@ -1,6 +1,7 @@
 package de.doppelbemme.jogo.disablecraft;
 
 import de.doppelbemme.jogo.disablecraft.command.About_Command;
+import de.doppelbemme.jogo.disablecraft.command.RecipeAll_Command;
 import de.doppelbemme.jogo.disablecraft.command.Recipe_Command;
 import de.doppelbemme.jogo.disablecraft.listener.PlayerCraftItem_Listener;
 import de.doppelbemme.jogo.disablecraft.util.FileManager;
@@ -22,6 +23,7 @@ public class Disablecraft extends JavaPlugin {
 
         getCommand("about").setExecutor(new About_Command());
         getCommand("recipe").setExecutor(new Recipe_Command());
+        getCommand("recipeall").setExecutor(new RecipeAll_Command());
 
         PluginManager pluginManager = Bukkit.getPluginManager();
 
