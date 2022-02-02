@@ -17,4 +17,16 @@ public class FileManager {
 //  playeruuid
 //    melone:
 //    pumpkin:
+
+    public void loadStatsFromFile(){
+        FileConfiguration statsCfg = Rewardpoints.getInstance().fileManager.GUICfg;
+
+        for (String path : statsCfg.getConfigurationSection("stats").getKeys(false)) {
+            int meloneBroken = statsCfg.getInt("stats." + path + ".melone");
+            int pumpkinBroken = statsCfg.getInt("stats." + path + ".pumpkin");
+            UUID playerUUID = UUID.fromString(path);
+            FarmLeaderboard.melone
+            }
+        }
+    }
 }
