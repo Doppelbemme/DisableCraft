@@ -1,0 +1,27 @@
+public HashMap pumpkinFarmStats<UUID, int> = new HashMap<UUID, int>();
+public HashMap melonFarmStats<UUID, int> = new HashMap<UUID, int>();
+
+
+public void startHashmapToFileConvertion(){
+  Bukkit.getScheduler.scheduleSyncRepeatingTask(this, new Runnable(){
+  
+    @Override
+    public void run(){
+      //Hashmap to file logic
+      
+      melomFarmStats.clear();
+      pumpkinFarmStats.clear();
+      loadFileIntoHashMap();
+    }
+    
+  }, 60*60*20);
+}
+
+public void loadFileIntoHashmap(){
+
+}
+public void saveHashmapIntoFile(){
+
+}
+
+}
