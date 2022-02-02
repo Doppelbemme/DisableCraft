@@ -1,0 +1,20 @@
+public class FileManager {
+
+    File statsFile = new File("plugins/Farmleaderboards", "stats.yml");
+    public FileConfiguration statsCfg = YamlConfiguration.loadConfiguration(statsFile);
+
+    public void saveStatsFile() {
+        try {
+            statsCfg.save(statsFile);
+        } catch (IOException exception) {
+            Bukkit.getConsoleSender().sendMessage("§cDatei konnte nicht gespeichert werden.");
+            Bukkit.getConsoleSender().sendMessage("§cFehler: " + exception.getMessage());
+        }
+    }
+
+//File Structure:
+//stats
+//  playeruuid
+//    melone:
+//    pumpkin:
+}
