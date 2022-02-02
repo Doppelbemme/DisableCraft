@@ -25,8 +25,25 @@ public class FileManager {
             int meloneBroken = statsCfg.getInt("stats." + path + ".melone");
             int pumpkinBroken = statsCfg.getInt("stats." + path + ".pumpkin");
             UUID playerUUID = UUID.fromString(path);
-            FarmLeaderboard.melone
+            FarmLeaderboard.getInstance().melonFarmStats.put(playerUUID, meloneBroken);
+            FarmLeaderboard.getInstance().pumpkinFarmStats.put(playerUUID, pumpkinBroken);
             }
+        }
+        
+        //getPoints from config
+        
+        public void saveStatsToFile(){
+            for (Map.Entry<String, Object> entry : FarmLeaderboard.getInstance().melonFarmStats.entrySet()) {
+                String key = entry.getKey();
+                int value = entry.getValue();
+                
+                if(statsCfg.contains("stats.key.melone")){
+                    statsCfg.set("stats.key.melone", getPoints+value)
+                }else{
+                statsCfg.set("stats.key.melone", value);
+                }
+        }
+    }
         }
     }
 }
